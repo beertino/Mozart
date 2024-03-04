@@ -60,7 +60,8 @@ def otsu(img):
 
 
 def get_gray(img):
-    gray = rgb2gray(np.copy(img))
+    import cv2
+    gray = np.copy(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY))
     return gray
 
 
